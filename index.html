@@ -28,28 +28,10 @@
         <p>Where all your desires are met.</p>
         <div class="featured-products">
             <h2>Featured Pizzas</h2>
-            <ul>
-                <li>
-                    <img src="pizza1.jpg" alt="Margherita Pizza">
-                    <h3>Margherita Pizza</h3>
-                    <p>Classic pizza with fresh tomatoes, mozzarella, and basil.</p>
-                </li>
-                <li>
-                    <img src="pizza2.jpg" alt="Pepperoni Pizza">
-                    <h3>Pepperoni Pizza</h3>
-                    <p>Spicy pepperoni slices with melted cheese on a crispy crust.</p>
-                </li>
-                <li>
-                    <img src="pizza3.jpg" alt="BBQ Chicken Pizza">
-                    <h3>BBQ Chicken Pizza</h3>
-                    <p>Grilled chicken, BBQ sauce, and red onions on a cheesy base.</p>
-                </li>
-                <li>
-                    <img src="pizza4.jpg" alt="Veggie Supreme Pizza">
-                    <h3>Veggie Supreme Pizza</h3>
-                    <p>A delightful mix of fresh vegetables on a cheesy crust.</p>
-                </li>
+            <ul class="product-list">
+                <!-- The product list will be populated by JavaScript -->
             </ul>
+        </div>
     </section>
 
     <footer>
@@ -60,6 +42,30 @@
             <a href="https://www.twitter.com" target="_blank">X</a>
         </p>
     </footer>
+
+    <script type="module">
+        import { getAllProducts } from "./products.js";
+
+        const products = getAllProducts();
+        const productsList = document.querySelector(".product-list");
+
+        for (let product of products) {
+            if (product.isActive) {
+                const item = document.createElement("li");
+                item.classList.add("product-item");
+                item.innerHTML = `
+                <img src="${product.thumbnail}">
+                <br>
+                <strong>${product.name}</strong>
+                <br>
+                ${product.description}
+                <br>
+                $${product.price}
+            `;
+                productsList.appendChild(item);
+            }
+        }
+    </script>
 </body>
 
 </html>

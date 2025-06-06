@@ -49,3 +49,14 @@ body {
 #main-content {
     padding: 115px 15px 15px 15px;
 }
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100px;
+}
+
+.product-item {
+    list-style-type: none;
+}
