@@ -1,0 +1,3 @@
+This website is a personal student project created solely for educational and non-commercial purposes as part of my coursework. Some images or materials on this site may be protected by copyright and are used here under the principles of fair use for academic demonstration and learning.
+
+All rights to images and content remain with their original copyright holders. If you are the copyright owner of any material displayed here and have concerns about its use, please contact me and I will promptly address the issue or remove the material as needed.

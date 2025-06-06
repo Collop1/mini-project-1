@@ -1,0 +1,62 @@
+:root {
+    --primary-color: #f74f36;
+    --secondary-color: #001722;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--secondary-color);
+    color: #FFF;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu > li {
+    list-style-type: none;
+}
+
+.nav-menu > li > a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#main-content {
+    padding: 115px 15px 15px 15px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100px;
+}
+
+.product-item {
+    list-style-type: none;
+}
