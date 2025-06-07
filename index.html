@@ -56,13 +56,14 @@
                 const item = document.createElement("li");
                 item.classList.add("product-item");
                 item.innerHTML = `
-                <img src="${product.thumbnail}">
-                <br>
-                <strong>${product.name}</strong>
-                <br>
-                ${product.description}
-                <br>
-                $${product.price}
+                <a class="product-link" href="products/${product.slug}">
+                    <img class="product-thumbnail" src="${product.thumbnail}">
+                    <h3 class="product-title">${product.name}</h3>
+                    <div class="product-info">
+                        <p class="product-description">${product.description}</p>
+                        <p class="product-price">$${product.price}</p>
+                    <div>
+                </a>
             `;
                 productsList.appendChild(item);
             }
