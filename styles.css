@@ -29,7 +29,7 @@ ul {
     position: fixed;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     background-color: var(--secondary-color);
     color: #FFF;
     height: 100px;
@@ -61,6 +61,9 @@ ul {
     display: flex;
     gap: 35px;
 }
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
 
 .nav-menu > li {
     list-style-type: none;
@@ -84,6 +87,10 @@ ul {
     cursor: pointer;
     z-index: 1100;
 }
+.burger:active span {
+    background-color: var(--primary-color);
+}
+
 .burger span {
     display: block;
     height: 4px;
@@ -95,27 +102,46 @@ ul {
 
 @media screen and (max-width: 700px) {
     .nav-menu {
-        display: none;
+        display: flex;
         position: absolute;
         top: 80px;
         right: 0;
         background: var(--secondary-color);
         flex-direction: column;
-        width: 100px;
+        width: 100%;
         max-width: 100%;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-        padding: 10px 0;
+        max-height: 0;
+        
         gap: 10px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        transition: max-height .3s ease-in-out, padding 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .nav-menu a:hover {
+        color: inherit;
+    }
+    .nav-menu li:hover {
+        background-color: var(--primary-color);
     }
     .nav-menu.active {
-        display: flex;
+        max-height: 500px;
+        padding: 10px 0;
     }
     .nav-menu > li {
-        margin: 10px 0;
+        padding: 0;
         text-align: right;
+        border-radius: 5px;
+    }
+    .nav-menu a {
+        display: block;
+        padding: 10px 20px;
     }
     .burger {
         display: flex;
+        margin-right: 20px;
+    }
+    #header {
+        justify-content: space-between;
     }
 }
 
@@ -126,12 +152,51 @@ ul {
 }
 
 .welcome-banner {
-    background-color: var(--primary-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
     color: #FFF;
+    height: 80vh;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 15px;
     margin-bottom: 20px;
+    background-image: url("images/wide-pizza-cover.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+.welcome-banner:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.welcome-banner > h1 {
+    font-size: 100px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+}
+
+.welcome-banner > p {
+    font-size: 50px;
+    margin: 10px 0;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-banner {
+        background-image: url("images/mobile-pizza-cover.jpg");
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .welcome-banner {
+        background-image: url("images/ultrawide-pizza-cover.jpg");
+    }
 }
 
 .featured-products > * {
