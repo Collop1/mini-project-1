@@ -39,6 +39,66 @@ const products = [
         "created_at": "2025-03-23 04:21:45",
         "isActive": false
     },
+    {
+        "product_id": 104,
+        "thumbnail": "images/thumbnail-pepperoni.jpg",
+        "name": "BBQ Chicken Pizza",
+        "description": "BBQ chicken pizza with a smoky flavor and tangy sauce.",
+        "category": "Pizza",
+        "price": 29.99,
+        "created_at": "2024-15-19 06:21:45",
+        "isActive": true
+    },
+    {
+        "product_id": 105,
+        "thumbnail": "images/thumbnail-pepperoni.jpg",
+        "name": "BBQ Chicken Pizza",
+        "description": "BBQ chicken pizza with a smoky flavor and tangy sauce.",
+        "category": "Pizza",
+        "price": 29.99,
+        "created_at": "2024-15-19 06:21:45",
+        "isActive": true
+    },
+    {
+        "product_id": 106,
+        "thumbnail": "images/thumbnail-pepperoni.jpg",
+        "name": "BBQ Chicken Pizza",
+        "description": "BBQ chicken pizza with a smoky flavor and tangy sauce.",
+        "category": "Pizza",
+        "price": 29.99,
+        "created_at": "2024-15-19 06:21:45",
+        "isActive": true
+    },
+    {
+        "product_id": 107,
+        "thumbnail": "images/thumbnail-pepperoni.jpg",
+        "name": "BBQ Chicken Pizza",
+        "description": "BBQ chicken pizza with a smoky flavor and tangy sauce.",
+        "category": "Pizza",
+        "price": 29.99,
+        "created_at": "2024-15-19 06:21:45",
+        "isActive": true
+    },
+    {
+        "product_id": 108,
+        "thumbnail": "images/thumbnail-pepperoni.jpg",
+        "name": "BBQ Chicken Pizza",
+        "description": "BBQ chicken pizza with a smoky flavor and tangy sauce.",
+        "category": "Pizza",
+        "price": 29.99,
+        "created_at": "2024-15-19 06:21:45",
+        "isActive": true
+    },
+    {
+        "product_id": 109,
+        "thumbnail": "images/thumbnail-pepperoni.jpg",
+        "name": "BBQ Chicken Pizza",
+        "description": "BBQ chicken pizza with a smoky flavor and tangy sauce.",
+        "category": "Pizza",
+        "price": 29.99,
+        "created_at": "2024-15-19 06:21:45",
+        "isActive": true
+    }
 ];
 
 export function getAllProducts() {
